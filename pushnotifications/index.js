@@ -45,7 +45,7 @@ const websiteJSONPromise = fs.outputFile(websiteJSONFileName, websiteInfoJSON)
 
 // create icons for push notification
 Promise.all(sizesWithMultiplier.map(o => {
-    return sharp('../clientside/images/logo_messages.png')
+    return sharp('../logo_messages.png')
 	.resize(o.size * o.times, o.size * o.times)
         .toBuffer()
         .then(resizedImageBuffer => {
